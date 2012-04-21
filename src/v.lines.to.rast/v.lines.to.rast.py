@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 """
 v.line.to.rast
+
+AUTHOR: Christian Kaiser <chri.kais@gmail.com>
+COPYRIGHT: Released under the GNU General Public License (GPL) version 3
 """
 
 
