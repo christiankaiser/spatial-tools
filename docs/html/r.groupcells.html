@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>SpatialTools _ raster _ r.groupcells</title>
+</head>
+
+<body>
+
+
+	<a href="index.html">List of programs</a>
+	<h1>r.groupcells</h1>
+	
+	
+<h3>Name</h3>
+<p><span class="highlight">r.groupcells</span> -- groups several cells of a raster together. This is a special case of resampling, or a sort of spatial group by.</p>
+
+
+<h3>Keywords</h3>
+<p>raster, resampling</p>
+
+
+
+<h3>Synopsis</h3>
+<p><span class="highlight">r.groupcells</span><br />
+	[-h]
+	-r value [-f format] [-s statistic] input_raster output_raster</p>
+
+
+
+
+<h3>Description</h3>
+<p>The following options are available:</p>
+
+<p class="inline">-h<br />
+Shows this usage note.</p>
+
+<p class="inline">-r value<br />
+The number of cells to group into one cell.</p>
+
+<p class="inline">-s statistic<br />
+	Statistic to use for grouping the cells together. Following options are
+	available: sum, min, max, mean. Default is mean.</p>
+
+<p class="inline">-f format<br />
+	Format for the output raster file. Default is GTiff.
+	The following formats are supported:
+	<table>
+	<tr><td>GTiff</td><td>GeoTIFF</td></tr>
+	<tr><td>HFA</td><td>Erdas Imagine (.img)</td></tr>
+	<tr><td>AAIGrid</td><td>Arc/Info ASCII Grid</td></tr>
+	<tr><td>PNG</td><td>Portable Network Graphics</td></tr>
+	<tr><td>JPEG</td><td>JPEG image</td></tr>
+	<tr><td>GIF</td><td>Graphics Interchange Format</td></tr>
+	<tr><td>PCIDSK</td><td>PCIDSK Database File</td></tr>
+	<tr><td>PCRaster</td><td>PCRaster Raster File</td></tr>
+	<tr><td>GMT</td><td>GMT NetCDF Grid Format</td></tr>
+	<tr><td>JPEG2000</td><td>JPEG-2000</td></tr>
+	<tr><td>RST</td><td>Idrisi Raster A.1</td></tr>
+	<tr><td>ENVI</td><td>ENVI .hdr Labelled</td></tr>
+	</table>
+	</p>
+			
+
+
+
+<h3>Bugs</h3>
+<p>Please send any comments or bug reports to <a href="mailto:spatial.tools.bugs@361degres.ch">spatial.tools.bugs@361degres.ch</a></p>
+
+<h3>Version</h3>
+<p>1.0.0 (21.5.2009)</p>
+
+<h3>Author</h3>
+<p>Christian Kaiser, University of Lausanne</p>
+
+<h3>Acknowledgements</h3>
+<p>This work has been supported by the Swiss National Foundation, through the projects "Urbanization
+   Regime and Environmental Impact: Analysis and Modelling of Urban Patters, Clustering and
+   Methamorphoses" (no 100012-113506, see <a href="http://www.clusterville.org">www.clusterville.org</a> for more information) and 
+   "GeoKernels": Kernel-Based Methods for Geo- and Environmental Sciences, phase 2 
+   (no 200020-121835, see <a href="http://www.geokernels.org">www.geokernels.org</a> for more information).</p>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>SpatialTools _ raster _ r.comparison.plot</title>
+</head>
+
+<body>
+
+<a href="index.html">List of programs</a>
+<h1>r.comparison.plot</h1>
+
+<h3>Name</h3>
+<p><span class="highlight">r.comparison.plot</span> -- creates a text file with two columns, the first containing the values of raster 1, and the second the values of raster 2. Only values different from NULL are considered. This file can be used for creating a comparison plot between two different raster files.</p>
+
+
+<h3>Keywords</h3>
+<p>raster, plot, comparison</p>
+
+
+
+<h3>Synopsis</h3>
+<p><span class="highlight">r.comparison.plot</span><br />
+	[--help]
+	--raster1 raster1 --raster2 raster2 [--band1 band1] [--band2 band2] [--output output_text_path]
+</p>
+
+
+
+<h3>Description</h3>
+<p>The following options are available:</p>
+
+<p class="inline">-h --help<br />
+Shows this usage note.</p>
+
+<p class="inline">--raster1<br />
+      Path to the raster 1 file.</p>
+
+<p class="inline">--raster2<br />
+      Path to the raster 2 file.</p>
+
+<p class="inline">--band1 band1<br />
+	The band of raster 1 to use. Default value is 1.</p>
+<p class="inline">--band2 band2<br />
+	The band of raster 2 to use. Default value is 1.</p>
+	
+<p class="inline">-o --output output_text_path<br />
+      Path to the resulting text file. If you don't provide an output file, the result is written to the standard output.</p>
+
+
+<h3>Bugs</h3>
+<p>Please send any comments or bug reports to <a href="mailto:spatial.tools.bugs@361degres.ch">spatial.tools.bugs@361degres.ch</a></p>
+
+<h3>Version</h3>
+<p>1.0.0 (22.10.2009)</p>
+
+<h3>Author</h3>
+<p>Christian Kaiser, University of Lausanne</p>
+
+<h3>Acknowledgements</h3>
+<p>This work has been supported by the Swiss National Foundation, through the projects "Urbanization
+   Regime and Environmental Impact: Analysis and Modelling of Urban Patters, Clustering and
+   Methamorphoses" (no 100012-113506, see <a href="http://www.clusterville.org">www.clusterville.org</a> for more information) and 
+   "GeoKernels": Kernel-Based Methods for Geo- and Environmental Sciences, phase 2 
+   (no 200020-121835, see <a href="http://www.geokernels.org">www.geokernels.org</a> for more information).</p>
+
+</body>
+</html>

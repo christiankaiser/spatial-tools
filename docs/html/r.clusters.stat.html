@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>SpatialTools _ raster _ r.clusters.stat</title>
+</head>
+
+<body>
+
+<a href="index.html">List of programs</a>
+<h1>r.clusters.stat</h1>
+
+<h3>Name</h3>
+<p><span class="highlight">r.clusters.stat</span> -- Computes statistics for different clusters. The clusters are defined in a raster file where the value corresponds to the cluster ID. The statistics are computed for the statistic raster file according to the spatial clusters defined in the cluster raster file. The statistics include the sum, number of cells, average, minimum and maximum.</p>
+
+
+<h3>Keywords</h3>
+<p>raster, clusters, statistics</p>
+
+
+
+<h3>Synopsis</h3>
+<p><span class="highlight">r.clusters.stats</span><br />
+	[--help] [--nodata 0] --clusters
+	clusters_raster --values statistics_raster --output output_text_file
+</p>
+
+
+
+<h3>Description</h3>
+<p>The following options are available:</p>
+
+
+<p class="inline">-h,--help<br />
+Shows the usage note.
+
+<p class="inline">-n,--nodata<br />
+Indicates which values in the clusters raster file should be considered as no data.
+
+<p class="inline">-c clusters_raster,--clusters clusters_raster<br />
+The raster file containing the clusters. It should contain the IDs of each cluster. The raster file should contain integer values. Only the first band of the file is considered.</p>
+
+<p class="inline">-v statistics_raster,--values statistics_raster<br />
+The raster for which we should compute the cluster statistics. Only the first band of the raster is considered. Both clusters and values raster file must have the same dimensions.
+
+<p class="inline">-o output_text_file,--output output_text_file<br />
+The path to the output text file which will contain the cluster statistics.</p>
+
+
+
+
+
+<h3>Bugs</h3>
+<p>Please send any comments or bug reports to <a href="mailto:spatial.tools.bugs@361degres.ch">spatial.tools.bugs@361degres.ch</a></p>
+
+<h3>Version</h3>
+<p>1.0.0 (24.11.2009)</p>
+
+<h3>Author</h3>
+<p>Christian Kaiser, University of Lausanne</p>
+
+<h3>Acknowledgements</h3>
+<p>This work has been supported by the Swiss National Foundation, through the projects "Urbanization
+   Regime and Environmental Impact: Analysis and Modelling of Urban Patters, Clustering and
+   Methamorphoses" (no 100012-113506, see <a href="http://www.clusterville.org">www.clusterville.org</a> for more information) and 
+   "GeoKernels": Kernel-Based Methods for Geo- and Environmental Sciences, phase 2 
+   (no 200020-121835, see <a href="http://www.geokernels.org">www.geokernels.org</a> for more information).</p>
+
+</body>
+</html>

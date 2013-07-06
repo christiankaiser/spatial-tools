@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>SpatialTools _ raster _ r.fdim.boxcount</title>
+</head>
+
+<body>
+
+
+	<a href="index.html">List of programs</a>
+	<h1>r.fdim.boxcount</h1>
+	
+	
+<h3>Name</h3>
+<p><span class="highlight">r.fdim.boxcount</span> -- estimates the fractal dimension using the boxcounting method.</p>
+
+
+<h3>Keywords</h3>
+<p>raster, fractals, fractal dimension</p>
+
+
+
+<h3>Synopsis</h3>
+<p><span class="highlight">r.lacunarity</span><br />
+	[--help]
+	[--band raster_band]
+	[--minbox 1] [--maxbox 20] 
+	[--vdom raster] [--plot output_plot] --raster input_raster</p>
+
+
+
+
+<h3>Description</h3>
+<p>Computes the fractal dimension for a given raster file.</p>
+
+<p>The following options are available:</p>
+
+<p class="inline">-h --help<br />
+Shows this usage note.</p>
+
+<p class="inline">-b raster_band | --band raster_band<br />
+      The raster band number for which we should estimate the fractal dimension. Default is 1.</p>
+
+<p class="inline">--minbox integer_value<br />
+      The minimum number of boxes to use for the box counting. Default is 1.</p>
+
+<p class="inline">--maxbox integer_value<br />
+      The maximum number of boxes (in 1 dimension) to use for the box counting. Default is 20.</p>
+
+<p class="inline">-v validity_domain_raster | --vdom validity_domain_raster<br />
+      A raster file where 0 values are outside the allowed region. If present, a corrected fractal dimension is also computed.</p>
+
+<p class="inline">-p output_plot | --plot output_plot<br />
+      Path to an output SVG file containing the fractal dimension output plot.</p>
+
+<p class="inline">-r input_raster | --raster input_raster<br />
+      Raster for which we should estimate the fractal dimension. Values of 0 are considered as no occurrence values, all others as occurrences.</p>
+		
+		
+<h3>References</h3>
+<p>Kanevski, M. and Maignan, M. (2004). <i>Analysis and modelling of spatial environmental data.</i> Lausanne: EPFL Press.</p>
+
+
+<h3>Bugs</h3>
+<p>Please send any comments or bug reports to <a href="mailto:spatial.tools.bugs@361degres.ch">spatial.tools.bugs@361degres.ch</a></p>
+
+<h3>Version</h3>
+<p>1.0.0 (6.6.2009)</p>
+
+<h3>Author</h3>
+<p>Christian Kaiser, University of Lausanne</p>
+
+<h3>Acknowledgements</h3>
+<p>This work has been supported by the Swiss National Foundation, through the projects "Urbanization
+   Regime and Environmental Impact: Analysis and Modelling of Urban Patters, Clustering and
+   Methamorphoses" (no 100012-113506, see <a href="http://www.clusterville.org">www.clusterville.org</a> for more information) and 
+   "GeoKernels": Kernel-Based Methods for Geo- and Environmental Sciences, phase 2 
+   (no 200020-121835, see <a href="http://www.geokernels.org">www.geokernels.org</a> for more information).</p>
+
+</body>
+</html>

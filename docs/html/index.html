@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>SpatialTools - Open source spatial processing</title>
+</head>
+<body>
+	<h1>SpatialTools - Open source spatial processing</h1>
+	
+	<p><i>SpatialTools</i> are a collection of simple command line programs written in C and available under the <a href="http:// www.gnu.org/licenses/gpl.html">GNU General Public Licence (GPL)</a>. The programs allow to achieve some very basic tasks that are difficult to achieve using common GIS software.</p>
+	
+	<p>Currently, all programs in the SpatialTools package are related to raster processing. The naming conventions of <a href="http://grass.osgeo.org">GRASS GIS</a> have been used.</p>
+	
+	<p>SpatialTools contains currently the following programs:
+	<ul>
+		<li><strong><a href="r.clusters.stat.html">r.clusters.stat</a></strong> <em>Computes statistics for different clusters</em></li>
+		<li><strong><a href="r.comparison.plot.html">r.comparison.plot</a></strong> <em>Allows comparing two raster images</em></li>
+		<li><strong><a href="r.downscale.html">r.downscale</a></strong> <em>Makes an areal interpolation using dasymmetric mapping.</em></li>
+		<li><strong><a href="r.fdim.boxcount.html">r.fdim.boxcount</a></strong> <em>Estimates the fractal dimension using the boxcounting method.</em></li>
+		<li><strong><a href="r.groupcells.html">r.groupcells</a></strong> <em>Groups several cells of a raster together. This is a special case of resampling, or a sort of spatial group by.</em></li>
+		<li><strong><a href="r.lacunarity.html">r.lacunarity</a></strong> <em>Computes the lacunarity measure for a raster image</em></li>
+		<li><strong><a href="r.percolation.html">r.percolation</a></strong> <em>Computes the spatial clusters in a raster map, based on percolation.</em></li>
+		<li><strong><a href="r.potential.html">r.potential</a></strong> <em>Computes a potential surface based on an input raster and a spatial variogram.</em></li>
+		<li><strong><a href="r.to.geoeas.html">r.to.geoeas</a></strong> <em>Writes a raster file into a GeoEAS text file.</em></li>
+	</ul>	
+	</p>
+	
+	
+	<h3>Download</h3>
+	<p>All the source code is written in C language and should compile using a more or less modern GCC compiler. The code has been written using XCode on Mac OS X; the XCode projects are contained in the download. Currently, no make files are present; if somebody is preparing compilation using the make system, I would be happy to include those in this distribution.<br />All the programs make use of the GDAL library that has to be downloaded separately (version 1.5 should be fine). On Mac OS X, you can use the precompiled frameworks from <a href="http://www.kyngchaos.com">kyngchaos.com</a>.</p>
+	<p><a href="spatial_tools_src_v20100210.zip">Download current version</a> (2010-02-10, ZIP file, 492 Ko)</p>
+	
+	
+	<h3>Contact</h3>
+	<p>Please send any comments or bug reports to <a href="mailto:spatial.tools.bugs@361degres.ch">spatial.tools.bugs@361degres.ch</a></p>
+
+	<h3>Author</h3>
+	<p>Christian Kaiser, University of Lausanne</p>
+
+	<h3>Acknowledgements</h3>
+	<p>This work has been supported by the Swiss National Foundation, through the projects "Urbanization
+	   Regime and Environmental Impact: Analysis and Modelling of Urban Patters, Clustering and
+	   Methamorphoses" (no 100012-113506, see <a href="http://www.clusterville.org">www.clusterville.org</a> for more information) and 
+	   "GeoKernels": Kernel-Based Methods for Geo- and Environmental Sciences, phase 2 
+	   (no 200020-121835, see <a href="http://www.geokernels.org">www.geokernels.org</a> for more information).</p>
+	
+	
+	
+</body>
+</html>

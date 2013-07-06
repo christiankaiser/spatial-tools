@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>SpatialTools _ raster _ r.downscale</title>
+</head>
+
+<body>
+
+<a href="index.html">List of programs</a>
+<h1>r.downscale</h1>
+
+<h3>Name</h3>
+<p><span class="highlight">r.downscale</span> -- Makes an areal interpolation using dasymmetric mapping, based on an aggregated statistics file, a validity domain and a probability layer.</p>
+
+
+<h3>Keywords</h3>
+<p>raster, change of support, dasymetric mapping, areal interpolation, statistics</p>
+
+
+
+<h3>Synopsis</h3>
+<p><span class="highlight">r.downscale</span><br />
+	[-h] [-f format] [-p prior_raster] [-v validity_domain_raster]
+	aggregated_stats.txt aggregate_raster probability_raster output_raster
+</p>
+
+
+
+<h3>Description</h3>
+
+<p>Note that all raster files must cover the same region and have the same resolution.</p>
+
+<p>The following options are available:</p>
+
+<p class="inline">-h,--help<br />
+Shows the usage note.</p>
+
+<p class="inline">-p prior_raster<br />
+Raster which contains the prior distribution. This must be an integer raster dataset.
+
+<p class="inline">-v validity_domain_raster<br />
+Raster which contains 0 and 1 values. Regions of value 0 are excluded from the downscaling process.</p>
+
+<p class="inline">-f format<br />
+Format for the output raster file. Default is HFA. The following formats are supported:<br />
+GTiff    : GeoTIFF<br />
+HFA      : Erdas Imagine (.img)<br />
+AAIGrid  : Arc/Info ASCII Grid<br />
+PNG      : Portable Network Graphics<br />
+JPEG     : JPEG image<br />
+GIF      : Graphics Interchange Format<br />
+PCIDSK   : PCIDSK Database File<br />
+PCRaster : PCRaster Raster File<br />
+GMT      : GMT NetCDF Grid Format<br />
+JPEG2000 : JPEG-2000<br />
+RST      : Idrisi Raster A.1<br />
+ENVI     : ENVI .hdr Labelled</p>
+
+<p class="inline">aggregated_stats.txt<br />
+Text file containing the aggregated statistics. It is a tab-separated file with 2 columns. The first column contains the feature id, the second the aggregated statistical value (a sum, which must be an integer). The first line should contain a header, it is ignored.</p>
+
+<p class="inline">aggregate_raster<br />
+A raster file containing the spatial locations of the features. It is simply a raster containing the feature id's per pixel. Feature id's must be integer values.</p>
+
+<p class="inline">probability_raster<br />
+Raster which indicates the spatial probability distribution. This raster may contain double values.</p>
+
+<p class="inline">output_raster<br />
+The output raster containing the downscaled statistics. It is an integer raster dataset.</p>
+
+
+
+
+
+<h3>Bugs</h3>
+<p>Please send any comments or bug reports to <a href="mailto:spatial.tools.bugs@361degres.ch">spatial.tools.bugs@361degres.ch</a></p>
+
+<h3>Version</h3>
+<p>1.1.1 (3.6.2009)</p>
+
+<h3>Author</h3>
+<p>Christian Kaiser, University of Lausanne</p>
+
+<h3>Acknowledgements</h3>
+<p>This work has been supported by the Swiss National Foundation, through the projects "Urbanization
+   Regime and Environmental Impact: Analysis and Modelling of Urban Patters, Clustering and
+   Methamorphoses" (no 100012-113506, see <a href="http://www.clusterville.org">www.clusterville.org</a> for more information) and 
+   "GeoKernels": Kernel-Based Methods for Geo- and Environmental Sciences, phase 2 
+   (no 200020-121835, see <a href="http://www.geokernels.org">www.geokernels.org</a> for more information).</p>
+
+</body>
+</html>

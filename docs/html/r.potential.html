@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>SpatialTools _ raster _ r.potential</title>
+</head>
+
+<body>
+
+
+	<a href="index.html">List of programs</a>
+	<h1>r.potential</h1>
+	
+	
+<h3>Name</h3>
+<p><span class="highlight">r.potential</span> -- Computes a potential surface based on an input raster and a spatial variogram.</p>
+
+
+<h3>Keywords</h3>
+<p>raster, potential, variogram, gravity model</p>
+
+
+
+<h3>Synopsis</h3>
+<p><span class="highlight">r.potential</span><br />
+	[-h]
+	[-m model] [-r range] [-s sill] [-n nugget] [-p power] [-f format]
+	[-b band] input_raster output_raster</p>
+
+
+
+
+<h3>Description</h3>
+<p>The following options are available:</p>
+
+<p class="inline">-h<br />
+Shows this usage note.</p>
+
+<p class="inline">-m model<br />
+	The model type to use for the variogram. Possible options are:
+	exp (exponential), spher (spherical), gauss (gaussian), power</p>
+
+<p class="inline">-r range<br />
+	The range is measured in number of pixels (a range of 5 means
+	5 pixels, with a resolution of 100 meters per pixel, this is 500 meters.</p>
+
+<p class="inline">-s sill<br />
+	The sill should be 1 for the computation of the potential.
+	(The potential is 1-y, where y is the variogram value)</p>
+
+<p class="inline">-n nugget<br />
+	You may want to include some noise. E.g. if you have a nugget of 0.2,
+	the potential at distance 0 is weightet with 0.8 instead of 1.</p>
+
+<p class="inline">-p power<br />
+	For power model only, where it replaces the nugget. Default is 2.</p>
+
+<p class="inline">-f format<br />
+	Format for the output raster file. Default is GTiff.
+	The following formats are supported:
+	<table>
+	<tr><td>GTiff</td><td>GeoTIFF</td></tr>
+	<tr><td>HFA</td><td>Erdas Imagine (.img)</td></tr>
+	<tr><td>AAIGrid</td><td>Arc/Info ASCII Grid</td></tr>
+	<tr><td>PNG</td><td>Portable Network Graphics</td></tr>
+	<tr><td>JPEG</td><td>JPEG image</td></tr>
+	<tr><td>GIF</td><td>Graphics Interchange Format</td></tr>
+	<tr><td>PCIDSK</td><td>PCIDSK Database File</td></tr>
+	<tr><td>PCRaster</td><td>PCRaster Raster File</td></tr>
+	<tr><td>GMT</td><td>GMT NetCDF Grid Format</td></tr>
+	<tr><td>JPEG2000</td><td>JPEG-2000</td></tr>
+	<tr><td>RST</td><td>Idrisi Raster A.1</td></tr>
+	<tr><td>ENVI</td><td>ENVI .hdr Labelled</td></tr>
+	</table>
+	</p>
+			
+<p class="inline">-b band<br />
+The band to be considered for the potential estimation. Default is 1.</p>
+
+<p class="inline">input_raster<br />
+</p>
+
+<p class="inline">output_raster<br />
+The output raster is a 64-bits floating point raster.</p>
+
+
+<h3>Bugs</h3>
+<p>Please send any comments or bug reports to <a href="mailto:spatial.tools.bugs@361degres.ch">spatial.tools.bugs@361degres.ch</a></p>
+
+<h3>Version</h3>
+<p>1.0.0 (24.5.2009)</p>
+
+<h3>Author</h3>
+<p>Christian Kaiser, University of Lausanne</p>
+
+<h3>Acknowledgements</h3>
+<p>This work has been supported by the Swiss National Foundation, through the projects "Urbanization
+   Regime and Environmental Impact: Analysis and Modelling of Urban Patters, Clustering and
+   Methamorphoses" (no 100012-113506, see <a href="http://www.clusterville.org">www.clusterville.org</a> for more information) and 
+   "GeoKernels": Kernel-Based Methods for Geo- and Environmental Sciences, phase 2 
+   (no 200020-121835, see <a href="http://www.geokernels.org">www.geokernels.org</a> for more information).</p>
+
+</body>
+</html>

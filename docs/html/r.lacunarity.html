@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>SpatialTools _ raster _ r.lacunarity</title>
+</head>
+
+<body>
+
+
+	<a href="index.html">List of programs</a>
+	<h1>r.lacunarity</h1>
+	
+	
+<h3>Name</h3>
+<p><span class="highlight">r.lacunarity</span> -- computes the lacunarity for a raster.</p>
+
+
+<h3>Keywords</h3>
+<p>raster, fractals, lacunarity</p>
+
+
+
+<h3>Synopsis</h3>
+<p><span class="highlight">r.lacunarity</span><br />
+	[--help]
+	[--spatial] [--3d]
+	--input input_raster [--band input_band] [--binary]
+	[--binaryThreshold 1] [--mwin 5]
+	[--gbox 3] [--gboxMin 3] [--gboxMax 30] [--gboxStep 1]
+	[--output output_raster_path] [--format format]</p>
+
+
+
+<h3>Description</h3>
+<p>The following options are available:</p>
+
+<p class="inline">-h --help<br />
+Shows this usage note.</p>
+
+<p class="inline">-s --spatial<br />
+      Produces a spatial image of lacunarity using a moving window technique.
+      If this flag is selected, an output image raster (--output) must be 
+      provided. This flag is not compatible with the gboxMin, gboxMax and
+      gboxStep options. You may want to provide the moving window size using
+      the mwin option, and an output raster format using the format option.</p>
+
+<p class="inline">--3d<br />
+      For non binary images, considers the gliding box in three dimensions.
+      This flag is therefore not compatible with the binary flag. Preference
+      will be given to the binary flag.<br />
+      If selected, the image is considered as being 3D instead of the layered
+      analysis approach.</p>
+
+<p class="inline">-i input_raster --input input_raster<br />
+      The raster for which we should compute the lacunarity.</p>
+
+<p class="inline">-b band | --band band<br />
+      The raster band for which we should compute the lacunarity. Default is 1.</p>
+
+<p class="inline">--binary<br />
+      The input raster should be treated as a binary image instead of
+      grayscale.</p>
+
+<p class="inline">--binaryThreshold<br />
+      The pixel value used as a threshold for binary images. Pixels smaller
+      than this value are converted to 0, pixels greater or equal than the
+      the threshold are converted to 1. This option is ignored if the binary
+      flag is not set. Default value is 1.</p>
+
+<p class="inline">-m moving_window_size | --mwin moving_window_size<br />
+      The size of the moving window. If you specify a value for this, you must
+      also choose the spatial flag, otherwise this value will be ignored.
+      The default value for this option is 5.</p>
+
+<p class="inline">-g gliding_box_size | --gbox gliding_box_size<br />
+      The size of the gliding box used for estimate the lacunarity.</p>
+
+<p class="inline">--gboxMin gliding_box_minimum_size<br />
+      The minimum gliding box size if you want to compute the lacunarity for
+      more than one gliding box size. This option is not compatible with the
+      gbox option and with the spatial option as it is not possible to compute
+      the spatial lacunarity for several gliding boxes.</p>
+
+<p class="inline">--gboxMax gliding_box_maximum_size<br />
+      The maximum gliding box size if you want to compute the lacunarity for
+      more than one gliding box size. This option is not compatible with the
+      gbox option and with the spatial option.</p>
+
+<p class="inline">--gboxStep gliding_box_step_size<br />
+      If you give a value for the gboxMin and gboxMax options, you can specify
+      a step size for the gliding box size. Default is 1.</p>
+
+<p class="inline">-o output_raster_path | --output output_raster_path<br />
+      The path to the output raster file. You need to select the spatial flag
+      in order to make something useful.</p>
+
+<p class="inline">-f format<br />
+Format for the output raster file. Default is HFA.<br />
+The following formats are supported:<br />
+GTiff    : GeoTIFF<br />
+HFA      : Erdas Imagine (.img)<br />
+AAIGrid  : Arc/Info ASCII Grid<br />
+PNG      : Portable Network Graphics<br />
+JPEG     : JPEG image<br />
+GIF      : Graphics Interchange Format<br />
+PCIDSK   : PCIDSK Database File<br />
+PCRaster : PCRaster Raster File<br />
+GMT      : GMT NetCDF Grid Format<br />
+JPEG2000 : JPEG-2000<br />
+RST      : Idrisi Raster A.1<br />
+ENVI     : ENVI .hdr Labelled</p>
+
+
+
+<h3>References</h3>
+<p>Mandelbrot, B. (1983). The fractal geometry of nature. New York: Freeman.</p>
+<p>Allain, C. and Cloitre, M. (1991). Characterizing the lacunarity of random
+      and deterministic fractal sets. Physical Review A, 44(6), 3552-3558.</p>
+<p>Plotnick, R., Gardner, R., Hargrove, W., Prestegaard, K. and Perlmutter, M.
+      Lacunarity analysis: a general technique for the analysis of spatial
+      patterns. Physical Review E, 53(5), 5461-5468.</p>
+<p>Myint, S. and Lam, N. (2005). A study of lacunarity-based texture analysis
+      approaches to improve urban image classification. Computers, Environment
+      and Urban Systems, 29(5), 501-523.</p>
+
+<h3>Bugs</h3>
+<p>Please send any comments or bug reports to <a href="mailto:spatial.tools.bugs@361degres.ch">spatial.tools.bugs@361degres.ch</a></p>
+
+<h3>Version</h3>
+<p>1.0.1 (15.7.2009)</p>
+
+<h3>Author</h3>
+<p>Christian Kaiser, University of Lausanne</p>
+
+<h3>Acknowledgements</h3>
+<p>This work has been supported by the Swiss National Foundation, through the projects "Urbanization
+   Regime and Environmental Impact: Analysis and Modelling of Urban Patters, Clustering and
+   Methamorphoses" (no 100012-113506, see <a href="http://www.clusterville.org">www.clusterville.org</a> for more information) and 
+   "GeoKernels": Kernel-Based Methods for Geo- and Environmental Sciences, phase 2 
+   (no 200020-121835, see <a href="http://www.geokernels.org">www.geokernels.org</a> for more information).</p>
+
+</body>
+</html>
